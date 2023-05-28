@@ -1,6 +1,6 @@
 import os
 import time
-#argotranslate is also a very cool project. Offline translation > sending api requests to google
+#argotranslate is also a very cool project. Offline translation > google
 import argostranslate.package
 import argostranslate.translate
 
