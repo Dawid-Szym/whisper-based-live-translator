@@ -1,7 +1,8 @@
 # whisper-based-live-translator
 Messy live translation project based on OpenAI Whisper. 
 Still working on it. Here are just the files I run. Obviously won't work out of the box. 
-Check out repo made by OpenAI it's very cool. My project works by running 3 python files at the same time which is 3 too many.
+Check out repo made by OpenAI it's very cool. My project works by running 3 python files at the same time which is 3 too many. It works which is great. 
+But it has huge performance and quality issues which is not great. Take a look for some parts that may be useful to you.
 
 # recorders - make files for translation (I highy recommend to record from speakers)
 recorder.py - I used it to record from the mic.
