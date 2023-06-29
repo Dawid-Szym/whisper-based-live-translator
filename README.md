@@ -7,7 +7,7 @@ Check out repo made by OpenAI it's very cool. My project works by running 3 pyth
 Place where some variables are stored and used by other files. You can change how whisper works here and set translator settings.
 
 # recorder 
-Makes files for translation. (I highy recommend to record from speakers)
+Makes files for translation. (I highy recommend to record from speakers, not from microphone)
 
 # transcriber 
 Transcribes the oldets recorded file from a directory.
