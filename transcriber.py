@@ -5,6 +5,7 @@ import atlas_settings
 
 
 #whisper can run on cpu but gpu is basically necessary
+
 torch.cuda.is_available()
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
 print(DEVICE)
@@ -24,18 +25,12 @@ while True:
     mel = whisper.log_mel_spectrogram(audio).to(model.device)
     if lang == None:
         _, probs = model.detect_language(mel)
-    
-    #print(f"Detected language: {max(probs, key=probs.get)}")
-
-    #LANGUAGE SETTING
+        
     options = whisper.DecodingOptions(language=lang, without_timestamps=True, fp16 = False)
 
-    #decoding
     result = whisper.decode(model, mel, options)
     result = model.transcribe(atlas_settings.recordings_directory+oldest_file, task = task, no_speech_threshold=no_speech_threshold)
 
-
-    #open&save to file or show translation
     if(atlas_settings.whisper_task_settings == "translate"):
         print(result['text'])
     elif(atlas_settings.whisper_task_settings == "transcribe"):
